@@ -6,7 +6,8 @@
         "postinstall": "umi setup",
         "setup": "umi setup",
         "start": "npm run dev",
-
+        "lint": "umi lint",
+        "lint:fix": "umi lint --fix"
     },
     "dependencies": {
         "@ant-design/pro-layout": "^7.14.3",
