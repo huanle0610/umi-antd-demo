@@ -11,7 +11,7 @@
   "tasks": {
     "dev": {
       "name": "dev",
-      "command": "dev",
+      "command": "npm run dev",
       "runAtStart": true
     }
   }
