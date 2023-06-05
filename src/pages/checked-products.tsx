@@ -2,7 +2,6 @@ import { useSearchParams } from 'react-router-dom';
 import { Col, Row, Tag } from 'antd';
 import styles from './checked-products.less';
 
-
 function CheckedProductList({ showAll }) {
   const [params, setParams] = useSearchParams();
   const filters = params.getAll('productFilter');
@@ -26,7 +25,7 @@ function CheckedProductList({ showAll }) {
 
   return (
     <div className={styles.productList}>
-      {(showAll ? allProducts : filters).map((v) => (
+      {(showAll ? allProducts : filters.filter((i) => allProducts.includes(i))).map((v) => (
         <Tag key={v} onClick={() => toggle(v)}>
           [{filters.includes(v) ? 'v' : ''}] {v} (click to toggle)
         </Tag>
